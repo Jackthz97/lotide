@@ -12,10 +12,10 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(array) {
   if (array) {
-    return "Yes!";
+    return array;
   }
   else {
-    return "No!";
+    return array;
   }
 };
 
