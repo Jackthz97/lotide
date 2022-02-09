@@ -11,7 +11,6 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const assertArraysEqual = function(actual, expected) {
-  console.log(actual, expected);
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -22,15 +21,17 @@ const assertArraysEqual = function(actual, expected) {
 const middle = function(array) {
   const arrMiddle = [];
   let midPoint = array.length / 2;
-  if (array.length % 2 === 0 && array.length > 2) {
-    for (let i = midPoint - 1; i < midPoint + 1; i++){
-      arrMiddle.push(array[i]);
+  if (array.length > 2) {
+    if (array.length % 2 === 0) {
+      for (let i = midPoint - 1; i < midPoint + 1; i++){
+        arrMiddle.push(array[i]);
+      }
+      return arrMiddle;
     }
-    return arrMiddle;
-  }
-  else if (array.length % 2 !== 0 && array.length > 2){
-    arrMiddle.push(array[Math.floor(midPoint)]);
-    return arrMiddle;
+    else {
+      arrMiddle.push(array[Math.floor(midPoint)]);
+      return arrMiddle;
+    }
   }
   else {
     return arrMiddle;
