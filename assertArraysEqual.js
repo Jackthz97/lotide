@@ -10,22 +10,17 @@ const eqArrays = function(arr1, arr2) {
   return false;
 };
 
-const assertArraysEqual = function(array) {
-  if (array) {
-    return array;
-  }
-  else {
-    return array;
-  }
+const assertArraysEqual = function(arr1, arr2) {
+  return eqArrays(arr1, arr2);
 };
 
 
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]))}`); // => true
+console.log(`Are the two array list equal? ${assertArraysEqual([1, 2, 3], [1, 2, 3])}`); // => true
 
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]))}`); // => false
+console.log(`Are the two array list equal? ${assertArraysEqual([1, 2, 3], [3, 2, 1])}`); // => false
 
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]))}`); // => true
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]))}`); // => false
+console.log(`Are the two array list equal? ${assertArraysEqual(["1", "2", "3"], ["1", "2", "3"])}`); // => true
+console.log(`Are the two array list equal? ${assertArraysEqual(["1", "2", "3"], ["1", "2", 3])}`); // => false
 
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays(["1", "2"], ["1", "2", "3"]))}`); // => false
-console.log(`Are the two array list equal? ${assertArraysEqual(eqArrays(["1", "2", "3"], ["2", "3"]))}`); // => false
+console.log(`Are the two array list equal? ${assertArraysEqual(["1", "2"], ["1", "2", "3"])}`); // => false
+console.log(`Are the two array list equal? ${assertArraysEqual(["1", "2", "3"], ["2", "3"])}`); // => false
