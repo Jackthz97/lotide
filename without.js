@@ -35,8 +35,8 @@ let without = function(source, itemsToRemove) {
   console.log(missingItems);
 };
 
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+without([1, 2, 3], [1]); // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
