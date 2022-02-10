@@ -14,9 +14,10 @@ const findKey = function(object, callback) {
       return key;
     }
   }
+  return undefined;
 };
 
-const found = findKey({
+const test1 = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -25,5 +26,15 @@ const found = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2); // => "noma"
 
+const test2 = findKey({
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+}, x => x.stars === 4); // => "undefined"
 
-assertEqual(found, "noma");
+
+assertEqual(test1, "noma");
+assertEqual(test2, undefined);
